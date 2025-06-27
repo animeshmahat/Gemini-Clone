@@ -118,3 +118,140 @@
   text-align: center;
   font-weight: 300;
 }
+
+.result {
+  padding: 0px 5%;
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+
+.result::-webkit-scrollbar {
+  display: none;
+}
+
+.result-title {
+  margin: 40px, 0px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.result img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.result-data {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+
+.loader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loader hr {
+  border-radius: 4px;
+  border: none;
+  background-color: #f6f7f8;
+  background: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
+  background-size: 800px, 50px;
+  height: 20px;
+  animation: loader 3s infinite linear;
+}
+
+@keyframes loader {
+  0% {
+    background-position: -800px 0;
+  }
+  100% {
+    background-position: 800px 0px;
+  }
+}
+
+.result-scrollable {
+  max-height: 60vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 10px;
+  margin-bottom: 1rem;
+  scroll-behavior: smooth;
+}
+
+.result-scrollable::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.result-scrollable {
+  scrollbar-width: none;
+}
+
+.result-data p {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  .main-bottom input {
+    flex: none;
+    width: 150px;
+  }
+
+  .main-bottom img {
+    width: 20px;
+  }
+
+  .search-box {
+    padding: 5px 10px;
+  }
+
+  .search-box div {
+    gap: 5px;
+  }
+
+  .main .cards {
+    display: none;
+  }
+}
+
+.result-html {
+  font-size: 1rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.result-html pre {
+  background: #1e1e1e;
+  color: #f1f1f1;
+  padding: 12px;
+  overflow-x: auto;
+  border-radius: 6px;
+}
+
+.result-html code {
+  font-family: monospace;
+}
+
+.result-html img {
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.result-html table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+.result-html th,
+.result-html td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
