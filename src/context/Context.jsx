@@ -83,9 +83,14 @@ const ContextProvider = (props) => {
       [usedPrompt]: htmlResponse,
     }));
 
-    // Add to history list only if new
-    if (!prompt) {
-      setPrevPrompts((prev) => [...prev, input]);
+    if (prompt) {
+      setPrevPrompts((prev) =>
+        prev.includes(prompt) ? prev : [...prev, prompt]
+      );
+    } else {
+      setPrevPrompts((prev) =>
+        prev.includes(input) ? prev : [...prev, input]
+      );
       setInput("");
     }
 
